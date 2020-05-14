@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 //DB CONNECTION
 mongoose
-  .connect("mongodb://localhost:27017/shashwatAssignment", {
+  .connect("mongodb+srv://shashwat07:shashwat@cluster0-eotuy.mongodb.net/test?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
@@ -86,4 +86,4 @@ app.delete("/api/users/:id", (req, res) => {
   });
 });
 
-app.listen(3000 || process.env.PORT);
+app.listen(process.env.PORT);
